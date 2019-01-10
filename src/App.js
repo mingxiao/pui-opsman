@@ -8,6 +8,8 @@ import 'pivotal-ui/css/colors';
 import ChangeLog from './changelog';
 import {Panel} from 'pivotal-ui/react/panels';
 
+import ExampleForm from './example_form';
+
 class ProductCard extends Component {
   render() {
     return (
@@ -55,7 +57,8 @@ class App extends Component {
               </FlexCol>
               <FlexCol fixed><PrimaryButton>Review Pending Changes</PrimaryButton></FlexCol>
             </Grid>
-            <ChangeLog/>
+            {/*<ChangeLog/>*/}
+            <ExampleForm/>
           </Fragment>
         </Siteframe>
       </div>
