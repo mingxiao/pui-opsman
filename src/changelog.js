@@ -25,7 +25,6 @@ export default class ChangeLog extends React.Component {
 
     const data = JSON.parse('[{"started_at":"2019-01-09 19:00:41 UTC","finished_at":"2019-01-09 19:07:12 UTC","user_name":"admin","status":"success","additions":"Ops Manager: Example Product service-broker 1.0-build.0\\nOps Manager: Example Product 2.5-committed.20181218.145035-stemcell.170.0","updates":"","deletions":"","unchanged":"BOSH Director 2.5-build.75"},{"started_at":"2019-01-09 18:35:55 UTC","finished_at":"2019-01-09 18:57:29 UTC","user_name":"admin","status":"failed","additions":"BOSH Director 2.5-build.75\\nOps Manager: Example Product vmtypes 1.0-build.0\\nOps Manager: Example Product service-broker 1.0-build.0\\nOps Manager: Example Product 2.5-committed.20181218.145035-stemcell.170.0","updates":"","deletions":"","unchanged":""}]');
 
-    console.log(data)
     return (
       <AdvancedTable columns={columns} data={data}/>
     );

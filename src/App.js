@@ -6,6 +6,17 @@ import {Grid, FlexCol} from 'pivotal-ui/react/flex-grids';
 import {PrimaryButton, DefaultButton} from 'pivotal-ui/react/buttons';
 import 'pivotal-ui/css/colors';
 import ChangeLog from './changelog';
+import {Panel} from 'pivotal-ui/react/panels';
+
+class ProductCard extends Component {
+  render() {
+    return (
+      <Panel className="product box-shadow-3">
+        I'm a product
+      </Panel>
+    );
+  }
+}
 
 class App extends Component {
   render() {
@@ -21,13 +32,20 @@ class App extends Component {
         }}>
           <Fragment>
             <Grid className="page">
-              <FlexCol className="paxxl bg-neutral-8" fixed><PrimaryButton>Import a Product</PrimaryButton></FlexCol>
+              <FlexCol className="bg-neutral-8" fixed><PrimaryButton className="">Import a Product</PrimaryButton></FlexCol>
               <FlexCol>
                 <Grid justifyContent="space-between">
                   <FlexCol fixed>
                     <div className="h2">Installation Dashboard</div>
                   </FlexCol>
                   <FlexCol fixed><DefaultButton flat icon={<Icon src="refresh"/>}>Revert</DefaultButton></FlexCol>
+                </Grid>
+                <Grid>
+                  <ProductCard></ProductCard>
+                  <ProductCard></ProductCard>
+                  <ProductCard></ProductCard>
+                  <ProductCard></ProductCard>
+                  <ProductCard></ProductCard>
                 </Grid>
               </FlexCol>
               <FlexCol fixed><PrimaryButton>Review Pending Changes</PrimaryButton></FlexCol>
