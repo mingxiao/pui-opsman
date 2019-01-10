@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Siteframe} from 'pivotal-ui/react/siteframe';
+import {Icon} from 'pivotal-ui/react/iconography';
+import {Grid, FlexCol} from 'pivotal-ui/react/flex-grids';
+import {PrimaryButton, DefaultButton} from 'pivotal-ui/react/buttons';
+import 'pivotal-ui/css/colors';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Siteframe {...{
+          headerProps: {
+            logo: <div className="ptl pbl pll" style={{fontSize: '40px'}}><Icon src="pivotal_p" style={{fill: 'currentColor'}}/></div>,
+            companyName: 'PCF',
+            productName: 'Ops Manager'
+          },
+        }}>
+          <Grid className="page">
+            <FlexCol className="paxxl bg-neutral-8" fixed><PrimaryButton>Import a Product</PrimaryButton></FlexCol>
+            <FlexCol>
+              <Grid justifyContent="space-between">
+                <FlexCol fixed><div className="h2">Installation Dashboard</div></FlexCol>
+                <FlexCol fixed><DefaultButton flat icon={<Icon src="refresh"/>}>Revert</DefaultButton></FlexCol>
+              </Grid>
+            </FlexCol>
+            <FlexCol fixed><PrimaryButton>Review Pending Changes</PrimaryButton></FlexCol>
+          </Grid>
+        </Siteframe>
       </div>
     );
   }
