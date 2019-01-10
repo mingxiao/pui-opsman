@@ -4,8 +4,8 @@ import {AdvancedTable} from 'pivotal-ui/react/table';
 export default class ChangeLog extends React.Component {
   render() {
     const columns = [
-      {displayName: 'Started', attribute: 'started_at', width: '10%'},
-      {displayName: 'Finished', attribute: 'finished_at', width: '10%'},
+      {displayName: 'Started', attribute: 'started_at', width: '10%', sortable: true},
+      {displayName: 'Finished', attribute: 'finished_at', width: '10%', sortable: true},
       {displayName: 'User', attribute: 'user_name', width: '9%'},
       {
         displayName: 'Result',
