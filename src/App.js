@@ -27,7 +27,12 @@ class App extends Component {
             logo: <div className="ptl pbl pll" style={{fontSize: '40px'}}><Icon src="pivotal_p"
                                                                                 style={{fill: 'currentColor'}}/></div>,
             companyName: 'PCF',
-            productName: 'Ops Manager'
+            productName: 'Ops Manager',
+            cols: [
+              <FlexCol fixed className="em-alt em-high type-sm">Installation Dashboard</FlexCol>,
+              <FlexCol fixed className="em-alt em-high type-sm">Stemcell Library</FlexCol>,
+              <FlexCol fixed className="em-alt em-high type-sm">Changelog</FlexCol>
+            ]
           },
         }}>
           <Fragment>
