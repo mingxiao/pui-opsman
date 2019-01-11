@@ -48,17 +48,15 @@ class App extends Component {
                   <FlexCol fixed><DefaultButton flat icon={<Icon src="refresh"/>}>Revert</DefaultButton></FlexCol>
                 </Grid>
                 <Grid>
-                  <ProductCard></ProductCard>
-                  <ProductCard></ProductCard>
-                  <ProductCard></ProductCard>
-                  <ProductCard></ProductCard>
-                  <ProductCard></ProductCard>
+                  <Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>
+                  <Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>
+                  <Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>
+                  <Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>
+                  <Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>
                 </Grid>
               </FlexCol>
               <FlexCol fixed><PrimaryButton>Review Pending Changes</PrimaryButton></FlexCol>
             </Grid>
-            {/*<ChangeLog/>*/}
-            <ExampleForm/>
           </Fragment>
         </Siteframe>
       </div>

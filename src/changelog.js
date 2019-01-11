@@ -16,7 +16,7 @@ export default class ChangeLog extends React.Component {
           return <div style={{backgroundColor}}>{status}</div>;
         }
       },
-      {displayName: 'Added', attribute: 'additions', width: '14%'},
+      {displayName: 'Added', attribute: 'additions', width: '14%', ellipsis: true},
       {displayName: 'Updated', attribute: 'updates', width: '14%'},
       {displayName: 'Deleted', attribute: 'deletions', width: '14%'},
       {displayName: 'Unchanged', attribute: 'unchanged', width: '14%'},
