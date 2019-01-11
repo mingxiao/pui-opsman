@@ -9,7 +9,7 @@ export default class ExampleForm extends React.Component {
   render() {
     return (
       <Form {...{
-        onSubmit: ({state: {current}}) => {alert('you have submitted:', current)},
+        onSubmit: ({current}) => {alert(`you have submitted: ${JSON.stringify(current)}`)},
         fields: {
           instances: {
             initialValue: 3,
@@ -37,8 +37,12 @@ export default class ExampleForm extends React.Component {
         {({fields, state}) => {
           return (
             <Grid>
-              <FlexCol fixed>{fields.instances}</FlexCol>
-              <FlexCol fixed>{fields.includeStemcell}</FlexCol>
+              <FlexCol fixed>
+                <Grid style={{flexDirection: 'column'}}>
+                  <FlexCol fixed>{fields.instances}</FlexCol>
+                  <FlexCol fixed>{fields.includeStemcell}</FlexCol>
+                </Grid>
+              </FlexCol>
               <ExpanderContent {...{expanded: state.current.includeStemcell, delay: 200}}>
                 {fields.stemcell}
               </ExpanderContent>
