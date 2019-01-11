@@ -3,11 +3,13 @@ import {Form} from 'pivotal-ui/react/forms';
 import {Grid, FlexCol} from 'pivotal-ui/react/flex-grids';
 import {Checkbox} from 'pivotal-ui/react/checkbox';
 import {ExpanderContent} from 'pivotal-ui/react/expander';
+import {PrimaryButton} from 'pivotal-ui/react/buttons';
 
 export default class ExampleForm extends React.Component {
   render() {
     return (
       <Form {...{
+        onSubmit: ({state: {current}}) => {alert('you have submitted:', current)},
         fields: {
           instances: {
             initialValue: 3,
@@ -40,6 +42,7 @@ export default class ExampleForm extends React.Component {
               <ExpanderContent {...{expanded: state.current.includeStemcell, delay: 200}}>
                 {fields.stemcell}
               </ExpanderContent>
+              <PrimaryButton type="submit">Save</PrimaryButton>
             </Grid>
           );
         }}
