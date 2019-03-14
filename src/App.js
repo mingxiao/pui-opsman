@@ -22,6 +22,7 @@ class ProductCard extends Component {
 
 class App extends Component {
   render() {
+    return <ChangeLog/>;
     return (
       <div className="App">
         <Siteframe {...{
@@ -37,27 +38,27 @@ class App extends Component {
             ]
           },
         }}>
-          <Fragment>
-            <Grid className="page">
-              <FlexCol className="bg-neutral-8" fixed><PrimaryButton className="">Import a Product</PrimaryButton></FlexCol>
-              <FlexCol>
-                <Grid justifyContent="space-between">
-                  <FlexCol fixed>
-                    <div className="h2">Installation Dashboard</div>
-                  </FlexCol>
-                  <FlexCol fixed><DefaultButton flat icon={<Icon src="refresh"/>}>Revert</DefaultButton></FlexCol>
-                </Grid>
-                <Grid>
-                  <Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>
-                  <Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>
-                  <Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>
-                  <Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>
-                  <Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>
-                </Grid>
-              </FlexCol>
-              <FlexCol fixed><PrimaryButton>Review Pending Changes</PrimaryButton></FlexCol>
-            </Grid>
-          </Fragment>
+          {/*<Fragment>*/}
+          {/*<Grid className="page">*/}
+          {/*<FlexCol className="bg-neutral-8" fixed><PrimaryButton className="">Import a Product</PrimaryButton></FlexCol>*/}
+          {/*<FlexCol>*/}
+          {/*<Grid justifyContent="space-between">*/}
+          {/*<FlexCol fixed>*/}
+          {/*<div className="h2">Installation Dashboard</div>*/}
+          {/*</FlexCol>*/}
+          {/*<FlexCol fixed><DefaultButton flat icon={<Icon src="refresh"/>}>Revert</DefaultButton></FlexCol>*/}
+          {/*</Grid>*/}
+          {/*<Grid>*/}
+          {/*<Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>*/}
+          {/*<Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>*/}
+          {/*<Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>*/}
+          {/*<Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>*/}
+          {/*<Panel className="box-shadow-3" style={{width: '160', height: '160'}}>I'm a product</Panel>*/}
+          {/*</Grid>*/}
+          {/*</FlexCol>*/}
+          {/*<FlexCol fixed><PrimaryButton>Review Pending Changes</PrimaryButton></FlexCol>*/}
+          {/*</Grid>*/}
+          {/*</Fragment>*/}
         </Siteframe>
       </div>
     );
